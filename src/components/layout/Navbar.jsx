@@ -15,11 +15,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
-          <div className="w-8 h-8 bg-forge-600 rounded-xl flex items-center justify-center shadow-glow-sm">
+          <div className="w-8 h-8 bg-buildora-600 rounded-xl flex items-center justify-center shadow-glow-sm">
             <Zap size={16} className="text-white" fill="white" />
           </div>
           <span className="font-display font-bold text-lg text-neutral-900 dark:text-white tracking-tight">
-            UIForge
+            UIBuildora
           </span>
         </Link>
 
@@ -33,7 +33,7 @@ export default function Navbar() {
                 to={link.href}
                 className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-150 ${
                   active
-                    ? 'bg-forge-50 dark:bg-forge-950 text-forge-700 dark:text-forge-300'
+                    ? 'bg-buildora-50 dark:bg-buildora-950 text-buildora-700 dark:text-buildora-300'
                     : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800'
                 }`}
               >
@@ -88,7 +88,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                 location.pathname.startsWith(link.href)
-                  ? 'bg-forge-50 text-forge-700'
+                  ? 'bg-buildora-50 text-buildora-700'
                   : 'text-neutral-600 hover:bg-neutral-100'
               }`}
             >

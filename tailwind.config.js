@@ -10,7 +10,7 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       colors: {
-        forge: {
+        buildora: {
           50:  '#f0f4ff',
           100: '#e0e9ff',
           200: '#c7d7fd',

@@ -23,7 +23,7 @@
   }
 
   ::selection {
-    @apply bg-forge-200 text-forge-900;
+    @apply bg-buildora-200 text-buildora-900;
   }
 
   ::-webkit-scrollbar {
@@ -39,7 +39,7 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-forge-600 to-forge-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-buildora-600 to-buildora-400;
   }
 
   .glass {
@@ -51,7 +51,7 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-5 py-2.5 bg-forge-600 hover:bg-forge-700 text-white font-body font-medium rounded-xl text-sm transition-all duration-200 shadow-glow-sm hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center gap-2 px-5 py-2.5 bg-buildora-600 hover:bg-buildora-700 text-white font-body font-medium rounded-xl text-sm transition-all duration-200 shadow-glow-sm hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0;
   }
 
   .btn-secondary {
@@ -75,7 +75,7 @@
   }
 
   .sidebar-item.active {
-    @apply bg-forge-50 dark:bg-forge-950 text-forge-700 dark:text-forge-300;
+    @apply bg-buildora-50 dark:bg-buildora-950 text-buildora-700 dark:text-buildora-300;
   }
 }
 

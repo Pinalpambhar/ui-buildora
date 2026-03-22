@@ -15,7 +15,7 @@ and full-page templates built with React + Tailwind CSS.
 
 ```bash
 # 1. Navigate to the project
-cd ui-forge
+cd ui-buildora
 
 # 2. Install dependencies
 npm install
