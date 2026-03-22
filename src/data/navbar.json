@@ -1,0 +1,18 @@
+[
+  { 
+    "label": "Components",
+    "href": "/components" 
+  },
+  {
+    "label": "Sections",
+    "href": "/sections" 
+  },
+  { 
+    "label": "Templates",
+    "href": "/templates" 
+  },
+  { 
+    "label": "Docs",
+    "href": "/docs" 
+  }
+]
