@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Daniel Foster",
+    "role": "Frontend Lead, SaaS Startup",
+    "initials": "DF",
+    "color": "from-buildora-400 to-violet-500",
+    "text": "UIBuildora drastically reduced our frontend build time. The components feel cohesive, modern, and production-ready without heavy customization."
+  },
+  {
+    "name": "Aisha Rahman",
+    "role": "Product Designer, Fintech",
+    "initials": "AR",
+    "color": "from-emerald-400 to-teal-500",
+    "text": "What impressed me most is the design consistency. Every section feels like it belongs to the same system, which makes product design much faster."
+  },
+  {
+    "name": "Miguel Santos",
+    "role": "Indie Maker",
+    "initials": "MS",
+    "color": "from-amber-400 to-orange-500",
+    "text": "I launched my MVP in days instead of weeks. The templates are practical, clean, and easy to adapt to different product styles."
+  },
+  {
+    "name": "Emily Carter",
+    "role": "Senior UI Engineer, HealthTech",
+    "initials": "EC",
+    "color": "from-pink-400 to-rose-500",
+    "text": "The code quality stands out. Components are readable, reusable, and follow solid structure, which made integration painless."
+  },
+  {
+    "name": "Rohan Mehta",
+    "role": "Startup Founder",
+    "initials": "RM",
+    "color": "from-sky-400 to-blue-500",
+    "text": "Dark mode, responsiveness, spacing — everything just works. It feels like a premium UI kit built specifically for developers."
+  },
+  {
+    "name": "Lena Hoffmann",
+    "role": "UX Engineer, B2B Platforms",
+    "initials": "LH",
+    "color": "from-violet-400 to-purple-500",
+    "text": "UIBuildora helped us prototype enterprise dashboards incredibly fast. The layouts scale beautifully for complex interfaces."
+  }
+]

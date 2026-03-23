@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Copy, Star } from "lucide-react";
 import Navbar from "../components/layout/Navbar";
 import Features from "../components/layout/Features";
+import testimonials from "../data/testimonials.json";
+import Footer from "../components/layout/Footer";
 
 // ---------- Hero ----------
 function Hero() {
@@ -243,6 +245,206 @@ function StatsStrip() {
   );
 }
 
+// ---------- Component Showcase ----------
+function ComponentShowcase() {
+  return (
+    <section className="py-10 px-4 bg-neutral-50 dark:bg-neutral-900/40">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-14">
+          <p className="text-xs font-semibold uppercase tracking-widest text-buildora-600 dark:text-buildora-400 mb-3">Component preview</p>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white mb-4 text-balance">
+            Beautiful, consistent components
+          </h2>
+          <p className="text-neutral-500 dark:text-neutral-400 text-lg max-w-xl mx-auto">
+            Every component is crafted to look perfect out of the box — and easy to customize.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-6">
+          {/* Buttons showcase */}
+          <div className="card p-7 flex flex-col gap-5">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-1">Buttons</p>
+              <h3 className="font-display font-semibold text-neutral-900 dark:text-neutral-100">Actions & CTAs</h3>
+            </div>
+            <div className="flex flex-col gap-3">
+              <button className="w-full py-2.5 bg-buildora-600 hover:bg-buildora-700 text-white font-medium rounded-xl text-sm shadow-glow-sm hover:shadow-glow transition-all">
+                Get started free
+              </button>
+              <button className="w-full py-2.5 bg-white dark:bg-neutral-800 hover:bg-neutral-50 text-neutral-700 dark:text-neutral-300 font-medium rounded-xl text-sm border border-neutral-200 dark:border-neutral-700 transition-all">
+                Learn more
+              </button>
+              <button className="w-full py-2.5 text-buildora-600 dark:text-buildora-400 font-medium text-sm hover:bg-buildora-50 dark:hover:bg-buildora-950 rounded-xl transition-all">
+                View documentation →
+              </button>
+            </div>
+            <div className="flex gap-2 flex-wrap">
+              {['sm', 'md', 'lg', 'loading', 'disabled'].map(v => (
+                <span key={v} className="badge bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400">{v}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* Cards & Badges */}
+          <div className="card p-7 flex flex-col gap-5">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-1">Cards & Badges</p>
+              <h3 className="font-display font-semibold text-neutral-900 dark:text-neutral-100">Content & status</h3>
+            </div>
+            <div className="bg-white dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700 p-4">
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <p className="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">Monthly Revenue</p>
+                  <p className="font-display text-2xl font-bold text-neutral-900 dark:text-white">$42,389</p>
+                </div>
+                <div className="w-9 h-9 rounded-xl bg-buildora-50 dark:bg-buildora-950 flex items-center justify-center text-buildora-600 dark:text-buildora-400">
+                  $
+                </div>
+              </div>
+              <div className="flex items-center gap-1 text-xs text-emerald-600 dark:text-emerald-400 font-medium">
+                <span>↑ 12.4%</span>
+                <span className="text-neutral-400 font-normal">vs last month</span>
+              </div>
+            </div>
+            <div className="flex gap-1.5 flex-wrap">
+              {[
+                { label: 'Active', color: 'bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400' },
+                { label: 'Beta', color: 'bg-buildora-50 dark:bg-buildora-950 text-buildora-700 dark:text-buildora-400' },
+                { label: 'Deprecated', color: 'bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400' },
+                { label: 'New', color: 'bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-400' },
+              ].map(b => (
+                <span key={b.label} className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${b.color}`}>{b.label}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* Form inputs */}
+          <div className="card p-7 flex flex-col gap-5">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-1">Forms</p>
+              <h3 className="font-display font-semibold text-neutral-900 dark:text-neutral-100">Inputs & controls</h3>
+            </div>
+            <div className="flex flex-col gap-3.5">
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-medium text-neutral-700 dark:text-neutral-300">Email address</label>
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-xs">@</span>
+                  <input
+                    readOnly
+                    defaultValue="you@example.com"
+                    className="w-full pl-7 pr-3 py-2 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-xs text-neutral-700 dark:text-neutral-300 outline-none"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-medium text-neutral-700 dark:text-neutral-300">Password</label>
+                <input
+                  readOnly
+                  type="password"
+                  defaultValue="password123"
+                  className="w-full px-3 py-2 rounded-lg border border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-950/30 text-xs text-neutral-700 dark:text-neutral-300 outline-none ring-2 ring-red-400/20"
+                />
+                <p className="text-xs text-red-500">Password must be at least 8 characters.</p>
+              </div>
+              <button className="btn-primary text-xs py-2 justify-center">Create account</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-10">
+          <Link to="/components" className="btn-secondary">
+            Browse all components <ArrowRight size={15} />
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ---------- Testimonials ----------
+function Testimonials() {
+  return (
+    <section className="py-24 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-14">
+          <p className="text-xs font-semibold uppercase tracking-widest text-buildora-600 dark:text-buildora-400 mb-3">Testimonials</p>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white mb-4">
+            Loved by builders
+          </h2>
+          <p className="text-neutral-500 dark:text-neutral-400 text-lg max-w-xl mx-auto">
+            Join thousands of developers and designers shipping faster with UIbuildora.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {testimonials.map((t, i) => (
+            <div
+              key={t.name}
+              className="card p-6 flex flex-col gap-4 hover:shadow-card transition-all duration-300 hover:-translate-y-0.5 animate-fade-up"
+              style={{ animationDelay: `${i * 60}ms` }}
+            >
+              <div className="flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} size={13} className="text-amber-400 fill-amber-400" />
+                ))}
+              </div>
+              <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed flex-1">
+                "{t.text}"
+              </p>
+              <div className="flex items-center gap-3 pt-1 border-t border-neutral-100 dark:border-neutral-800">
+                <div className={`w-9 h-9 rounded-full bg-gradient-to-br ${t.color} flex items-center justify-center text-white font-bold text-xs flex-shrink-0`}>
+                  {t.initials}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">{t.name}</p>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">{t.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ---------- CTA ----------
+function CTA() {
+  return (
+    <section className="py-24 px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="relative bg-buildora-600 rounded-3xl p-14 overflow-hidden shadow-glow">
+          <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-buildora-400/30 rounded-full blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-violet-500/30 rounded-full blur-3xl" />
+          <div className="relative">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4 text-balance">
+              Start building today
+            </h2>
+            <p className="text-buildora-200 text-lg mb-8 max-w-lg mx-auto">
+              Join 2,400+ developers shipping faster with UIbuildora. Free to start, no credit card required.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <Link
+                to="/components"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-buildora-700 hover:bg-buildora-50 font-medium rounded-xl text-base transition-all duration-200 shadow-soft hover:-translate-y-0.5"
+              >
+                Browse free components <ArrowRight size={16} />
+              </Link>
+              <Link
+                to="/docs"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-buildora-700/60 hover:bg-buildora-700/80 text-white border border-buildora-500/50 font-medium rounded-xl text-base transition-all duration-200"
+              >
+                Read the docs
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 const LandingPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -251,7 +453,11 @@ const LandingPage = () => {
         <Hero />
         <StatsStrip />
         <Features />
+        <ComponentShowcase />
+        <Testimonials />
+        <CTA />
       </main>
+      <Footer />
     </div>
   );
 };
