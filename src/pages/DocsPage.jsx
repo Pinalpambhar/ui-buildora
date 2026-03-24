@@ -21,7 +21,7 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
 # 3. Add Google Fonts (Syne + DM Sans) to index.html
-# 4. Copy component code from UIForge — done!`
+# 4. Copy component code from UIBuildora — done!`
 
 const tailwindConfigCode = `// tailwind.config.js
 export default {
@@ -35,7 +35,7 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       colors: {
-        forge: {
+        buildora: {
           50: '#f0f4ff',
           500: '#6374f1',
           600: '#4f55e5',
@@ -46,7 +46,7 @@ export default {
   },
 }`
 
-const usageCode = `// Copy any component from UIForge and paste into your project
+const usageCode = `// Copy any component from UIbuildora and paste into your project
 // Example: Primary Button
 
 export function Button({ children, variant = 'primary', size = 'md' }) {
@@ -59,7 +59,7 @@ export function Button({ children, variant = 'primary', size = 'md' }) {
   return (
     <button
       className={\`inline-flex items-center gap-2 font-medium rounded-xl
-        bg-forge-600 hover:bg-forge-700 text-white transition-all
+        bg-buildora-600 hover:bg-buildora-700 text-white transition-all
         \${sizes[size]}\`}
     >
       {children}
@@ -127,7 +127,7 @@ export default function DocsPage() {
             Getting Started
           </h1>
           <p className="text-neutral-500 dark:text-neutral-400 text-lg leading-relaxed mb-8 max-w-2xl">
-            UIForge is a copy-paste component library. There's nothing to install —
+            UIbuildora is a copy-paste component library. There's nothing to install —
             just pick a component, copy the code, and drop it into your project.
           </p>
 
@@ -156,7 +156,7 @@ export default function DocsPage() {
         <section id="installation" className="mb-14">
           <h2 className="font-display text-2xl font-bold text-neutral-900 dark:text-white mb-2">Installation</h2>
           <p className="text-neutral-500 dark:text-neutral-400 mb-6 leading-relaxed">
-            UIForge components require <strong className="text-neutral-700 dark:text-neutral-300">React 18+</strong> and{' '}
+            UIbuildora components require <strong className="text-neutral-700 dark:text-neutral-300">React 18+</strong> and{' '}
             <strong className="text-neutral-700 dark:text-neutral-300">Tailwind CSS 3+</strong>. No npm package needed.
           </p>
           <CodeBlock code={installCode} language="bash" />
@@ -173,11 +173,11 @@ export default function DocsPage() {
           </p>
           <CodeBlock code={usageCode} language="jsx" />
 
-          <div className="mt-6 p-5 rounded-xl bg-forge-50 dark:bg-forge-950/60 border border-forge-200 dark:border-forge-800">
-            <p className="text-sm font-semibold text-forge-800 dark:text-forge-200 mb-1">💡 Pro tip</p>
-            <p className="text-sm text-forge-700/80 dark:text-forge-300/80">
-              Create a <code className="font-mono text-xs bg-forge-100 dark:bg-forge-900 px-1.5 py-0.5 rounded">components/ui/</code> folder in your project
-              and paste all UIForge components there. This keeps your UI library organized and easy to import.
+          <div className="mt-6 p-5 rounded-xl bg-buildora-50 dark:bg-buildora-950/60 border border-buildora-200 dark:border-buildora-800">
+            <p className="text-sm font-semibold text-buildora-800 dark:text-buildora-200 mb-1">💡 Pro tip</p>
+            <p className="text-sm text-buildora-700/80 dark:text-buildora-300/80">
+              Create a <code className="font-mono text-xs bg-buildora-100 dark:bg-buildora-900 px-1.5 py-0.5 rounded">components/ui/</code> folder in your project
+              and paste all UIbuildora components there. This keeps your UI library organized and easy to import.
             </p>
           </div>
         </section>
@@ -188,7 +188,7 @@ export default function DocsPage() {
         <section id="theming" className="mb-14">
           <h2 className="font-display text-2xl font-bold text-neutral-900 dark:text-white mb-2">Theming</h2>
           <p className="text-neutral-500 dark:text-neutral-400 mb-6 leading-relaxed">
-            UIForge uses a custom Tailwind color palette. Add the following to your <code className="font-mono text-sm">tailwind.config.js</code> to get
+            UIbuildora uses a custom Tailwind color palette. Add the following to your <code className="font-mono text-sm">tailwind.config.js</code> to get
             the exact same color scale used in all components.
           </p>
           <CodeBlock code={tailwindConfigCode} language="js" />
@@ -218,7 +218,7 @@ export default function DocsPage() {
         <section id="dark-mode" className="mb-14">
           <h2 className="font-display text-2xl font-bold text-neutral-900 dark:text-white mb-2">Dark Mode</h2>
           <p className="text-neutral-500 dark:text-neutral-400 mb-6 leading-relaxed">
-            All UIForge components include dark mode variants using Tailwind's <code className="font-mono text-sm">dark:</code> prefix.
+            All UIbuildora components include dark mode variants using Tailwind's <code className="font-mono text-sm">dark:</code> prefix.
             Enable it by toggling the <code className="font-mono text-sm">dark</code> class on <code className="font-mono text-sm">{'<html>'}</code>.
           </p>
           <CodeBlock code={darkModeCode} language="jsx" />
