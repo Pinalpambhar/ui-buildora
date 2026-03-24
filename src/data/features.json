@@ -10,23 +10,8 @@
     "desc": "Every component uses Tailwind CSS utility classes. Customize anything by editing class names directly."
   },
   {
-    "icon": "Moon",
-    "title": "Dark mode included",
-    "desc": "Light and dark variants are built into every component."
-  },
-  {
     "icon": "Accessibility",
     "title": "Accessible by design",
     "desc": "Components follow WCAG guidelines with proper ARIA roles."
-  },
-  {
-    "icon": "Figma",
-    "title": "Figma kit included",
-    "desc": "Pixel-perfect Figma kit kept in sync with updates."
-  },
-  {
-    "icon": "RefreshCw",
-    "title": "Weekly updates",
-    "desc": "New components and templates are added every week."
   }
 ]

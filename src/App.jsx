@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from './hooks/useTheme'
 import AppLayout from "./layouts/AppLayout";
 import LandingPage from "./pages/LandingPage";
 import ComponentsPage from "./pages/ComponentsPage";
@@ -10,7 +9,6 @@ import DocsPage from "./pages/DocsPage";
 
 function App() {
   return (
-    <ThemeProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -23,7 +21,6 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </ThemeProvider>
   );
 }
 

@@ -1,24 +1,22 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Sun, Moon, Menu, X, Zap } from 'lucide-react'
-import { useTheme } from '../../hooks/useTheme'
+import { Menu, X, Zap } from 'lucide-react'
 import { useState } from 'react'
 import navLinks from '../../data/navbar.json'
 
 
 export default function Navbar() {
-  const { toggle, isDark } = useTheme()
   const location = useLocation()
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/80 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
           <div className="w-8 h-8 bg-buildora-600 rounded-xl flex items-center justify-center shadow-glow-sm">
             <Zap size={16} className="text-white" fill="white" />
           </div>
-          <span className="font-display font-bold text-lg text-neutral-900 dark:text-white tracking-tight">
+          <span className="font-display font-bold text-lg text-neutral-900 tracking-tight">
             UIBuildora
           </span>
         </Link>
@@ -33,8 +31,8 @@ export default function Navbar() {
                 to={link.href}
                 className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-150 ${
                   active
-                    ? 'bg-buildora-50 dark:bg-buildora-950 text-buildora-700 dark:text-buildora-300'
-                    : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800'
+                    ? 'bg-buildora-50 text-buildora-700'
+                    : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100'
                 }`}
               >
                 {link.label}
@@ -45,14 +43,6 @@ export default function Navbar() {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2">
-          <button
-            onClick={toggle}
-            className="btn-ghost p-2"
-            aria-label="Toggle theme"
-          >
-            {isDark ? <Sun size={17} /> : <Moon size={17} />}
-          </button>
-
           <a
             href="https://github.com"
             target="_blank"
@@ -80,7 +70,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 px-4 py-3 flex flex-col gap-1 animate-fade-in">
+        <div className="md:hidden border-t border-neutral-200 bg-white px-4 py-3 flex flex-col gap-1 animate-fade-in">
           {navLinks.map(link => (
             <Link
               key={link.href}
